@@ -1,0 +1,38 @@
+#Readme
+##Introduction
+This project is a simulation of an exploring method deisgned for
+multi-target in teleport-point map.The strategy is based on Dijkstra algorithm and A-star algorithm aiming
+to generate the optimal path reaching all the target nodes. There are 3 kinds of different maps tested
+as the output results, with elements like obstacles, freespace, mountain, river and road. Also, the 
+weight parameter w was added to modify local planner to weight A-star algorithm as part of the test. In the final, 
+this algorithm was compared with another two methods to show its capabilities.
+
+##Main result file
+To check all the output plots, you could just run the main_result.m file. The briefly explanations are listed as below.
+```python
+figure(1)%small_map
+Test_main(21,10);
+
+figure(2)%medium map
+Test_main(41,15);
+
+figure(3)%large_map
+Test_main(61,20);
+```
+
+```python
+
+figure(4)%weight_large_map
+Test_main_weight(61,20);
+```
+
+```python
+%12 plots for comparison with another methods
+Test_Plot_Main_Large();
+Test_Plot_Main_Medium();
+Test_Plot_Main_Small();
+
+%Plots with increasing target number
+Test_increasingnumber_plot();
+
+```
